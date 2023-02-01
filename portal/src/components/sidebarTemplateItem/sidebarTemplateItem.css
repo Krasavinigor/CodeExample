@@ -1,0 +1,33 @@
+.title {
+  font-size: 1rem;
+  padding: .5rem;
+  padding-right: .3rem;
+  padding-bottom: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: fit-content;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.sidebar-template-header {
+  display: flex;
+  justify-content: space-between;
+  width: inherit;
+}
+
+.sidebar-template-content {
+  font-size: .8rem;
+  margin: .5rem;
+  margin-top: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.selectable .MuiBox-root {
+  width: 100%;
+}

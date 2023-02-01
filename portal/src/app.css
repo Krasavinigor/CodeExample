@@ -1,0 +1,11 @@
+.app {
+  display: grid;
+  justify-content: space-evenly;
+  justify-items: center;
+}
+
+.app-logout-button {
+  position: absolute;
+  right: 5vw;
+  top: 5vh;
+}

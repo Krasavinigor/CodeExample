@@ -1,0 +1,42 @@
+:root {
+  --scrollbar-width: 20px;
+}
+
+.sidebar {
+  display: flex;
+  align-self: start;
+  flex-direction: column;
+  width: 33%;
+  justify-items: center;
+  align-items: center;
+  height: 100%;
+  border-right: 1px solid;
+  border-color: var(--border-color);
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-left: 1px solid;
+  border-color: var(--border-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-color);
+  border-radius: var(--scrollbar-width);
+  border: 6px solid transparent;
+  background-clip: content-box;
+  min-height: 2em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-hover-color);
+}
+
+::-webkit-scrollbar:disabled {
+  display: none;
+}

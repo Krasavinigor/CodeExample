@@ -1,0 +1,7 @@
+.settings {
+  display: grid;
+  background-color: #c7ffe1;
+  justify-items: center;
+  align-items: center;
+  height: 100%;
+}

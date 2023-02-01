@@ -1,0 +1,8 @@
+.google-auth-button {
+  background: var(--primary-color) !important;
+  border: 2px solid #ffffff26 !important;
+  box-sizing: border-box !important;
+  border-radius: 4px !important;
+  font-size: .9rem !important;
+  color: var(--scrollbar-color) !important;
+}

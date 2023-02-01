@@ -1,0 +1,10 @@
+/src
+/node_modules
+/public
+
+.eslintrc.json
+package.json
+tsconfig.json
+
+*.lock
+*.md

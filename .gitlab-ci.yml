@@ -1,0 +1,103 @@
+workflow:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "push"'
+    - if: '$CI_PIPELINE_SOURCE == "commit"'
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_PIPELINE_SOURCE == "web"'
+
+image: node:lts-alpine3.12
+
+stages:
+  - build
+  - test
+
+Build Portal:
+  rules:
+  - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    changes:
+      - portal/**/*
+      - ".gitlab-ci.yml"
+  stage: build
+  before_script:
+    - cd ./portal
+    - yarn install
+  script:
+    - yarn build
+
+Test Portal:
+  rules:
+  - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    changes:
+      - portal/**/*
+      - ".gitlab-ci.yml"
+  stage: test
+  needs: ["Build Portal"]
+  before_script:
+    - cd ./portal
+    - yarn install
+  script:
+    - yarn test
+
+Build Extension:
+  rules:
+  - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    changes:
+      - extension/**/*
+      - ".gitlab-ci.yml"
+  stage: build
+  before_script:
+    - apk --no-cache add zip
+    - cd ./extension
+    - yarn install
+  script:
+    - yarn build
+    - zip -r extension_build build
+  artifacts:
+    paths:
+    - ./extension/extension_build.zip
+
+Test Extension:
+  rules:
+  - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    changes:
+      - extension/**/*
+      - ".gitlab-ci.yml"
+  stage: test
+  needs: ["Build Extension"]
+  before_script:
+    - cd ./extension
+    - yarn install
+  script:
+    - yarn test
+
+Build Serverless:
+  rules:
+  - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    changes:
+      - serverless/**/*
+      - ".gitlab-ci.yml"
+  stage: build
+  before_script:
+    - apk --no-cache add zip
+    - cd ./serverless
+    - yarn install
+  script:
+    - yarn build
+    - zip -r serverless_build dist yarn.lock package.json
+  artifacts:
+    paths:
+    - ./serverless/serverless_build.zip
+
+Test Serverless:
+  rules:
+  - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    changes:
+      - serverless/**/*
+      - ".gitlab-ci.yml"
+  stage: test
+  needs: ["Build Serverless"]
+  before_script:
+    - cd ./serverless
+    - yarn install
+  script:
+    - yarn test

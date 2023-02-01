@@ -1,0 +1,18 @@
+.box-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.box-with-buttons {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  width: 93.22%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: 1px solid;
+  border-color: var(--border-color);
+  border-top: none;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}

@@ -1,0 +1,74 @@
+.help-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: scroll;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  height: 92%;
+  padding: 1.5rem;
+  padding-bottom: 1rem;
+  line-height: 1.6rem;
+}
+
+.intro {
+  font-size: 1.1rem;
+  font-family: Lato, sans-serif;
+  margin-bottom: 1.2rem;
+}
+
+.assistant {
+  color: var(--primary-color);
+}
+
+.tip {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.tips-title {
+  margin-left: 2.2rem;
+}
+
+.img-tip {
+  margin-bottom: -.3rem;
+  margin-left: .2rem;
+}
+
+.ripple {
+  margin-bottom: -1rem;
+  margin-left: .2rem;
+}
+
+.devs-info {
+  margin-top: 1.2rem;
+  padding: .5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  font-size: 1.1rem;
+  font-family: Lato, sans-serif;
+}
+
+ul.help {
+  list-style: none;
+  margin-top: .1rem;
+}
+
+ul.help li.help::before {
+  content: "\2022";
+  color: var(--secondary-color);
+  font-weight: bolder;
+  display: inline-block;
+  width: .8rem;
+  margin-top: .7rem;
+}
+
+ul.help li.help {
+  padding-right: 1rem;
+  line-height: 180%;
+}
+
+a.help:link {
+  color: var(--primary-color);
+}

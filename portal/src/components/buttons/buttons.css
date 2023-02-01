@@ -1,0 +1,14 @@
+:root {
+  --active-button-color: #3f51b5;
+  --disabled-button-color: #bdbdbd;
+  --delete-button-color: #F50057;
+}
+
+.buttons-box {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}

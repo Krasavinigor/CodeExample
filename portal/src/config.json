@@ -1,0 +1,11 @@
+{
+  "firebase": {
+    "apiKey": "AIzaSyDdgEQDivbHXg3gT3H4G4fllVobrMmJ4XA",
+    "authDomain": "recruiters-assistant-portal.firebaseapp.com",
+    "projectId": "recruiters-assistant-portal",
+    "storageBucket": "recruiters-assistant-portal.appspot.com",
+    "messagingSenderId": "587644124091",
+    "localAppId": "1:587644124091:web:3ee06f587e60b9f1ed229e",
+    "appId": "1:587644124091:web:634cb9285f65ec9fed229e"
+  }
+}

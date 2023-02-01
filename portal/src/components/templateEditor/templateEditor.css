@@ -1,0 +1,21 @@
+.MuiFormControl-root {
+  width: 100%;
+}
+
+.title-input .MuiOutlinedInput-root {
+  margin-bottom: 2rem;
+}
+
+.template-input .MuiOutlinedInput-root {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.template {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.template-modal {
+  text-align: center;
+}

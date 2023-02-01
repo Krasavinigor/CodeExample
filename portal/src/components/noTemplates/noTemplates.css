@@ -1,0 +1,12 @@
+.no-templates {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.no-templates-title {
+  margin: .5rem;
+  font-weight: bold;
+}
